@@ -1,0 +1,3 @@
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{const g=b.dataset.g;document.querySelectorAll('.tab[data-g="'+g+'"]').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.querySelectorAll('.pane[id^="'+g+'"]').forEach(p=>p.classList.toggle('on',p.id===b.dataset.t));});
+const h=location.hash.slice(1);if(h){const t=document.querySelector('.tab[data-t="'+h+'"]');if(t)t.click();}
+document.querySelectorAll('.burger,.scrim').forEach(e=>e.addEventListener('click',()=>document.body.classList.toggle('open')));
